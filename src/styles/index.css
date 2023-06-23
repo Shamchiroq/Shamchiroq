@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* style with tag */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    border-bottom: 2px solid #E0E0E0;
+}
+footer{
+    border-top: 2px solid #E0E0E0;
+} 
+h1{
+    @apply text-black font-bold text-5xl;
+    font-family: 'Dela Gothic One', cursive; 
+}
+h2{
+    @apply text-black font-bold text-3xl;
+    font-family: 'Dela Gothic One', cursive; 
+}
+li{
+    list-style-type: none;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+}
+h3, h4, h4, h6, p, li{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* style with class */
+.container{
+    @apply px-24;
+}
+.redBtn{
+    background-color: #F2D4DC;
+    font-weight:500;
+    color: #945069;
+    transition: all ease-in 0.3s;
+    width: fit-content;
+}
+.redBtn:hover{
+    color: #945069 !important;
+    border: 1px solid #945069 !important;
+}
+.blueBtn{
+    background-color: #C3DCE3;
+    font-weight:500;
+    color: #2B788B;
+    transition: all ease-in 0.3s;
+    width: fit-content;
+}
+.blueBtn:hover{
+    color: #2B788B !important;
+    border: 1px solid #2B788B !important;
+}
+.greenBtn{
+    background-color: #639B6D;
+    font-weight:500;
+    color:#fff;
+    transition: all ease-in 0.3s;
+    width: fit-content;
+}
+.greenBtn:hover{
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+
+.main_block{
+    @apply h-[90vh] grid grid-cols-2;
+}
+
+.search-btn{
+    @apply bg-dark-green text-[white] !px-10 !h-[55px];
+}
+.search-btn:hover{
+    color:#fff !important;
+    border:#2B788B 1px solid !important;
+}
+.search{
+    height: 55px !important;
+    color:#2B788B !important;
+}
+.search:hover{
+    border:#2B788B 1px solid !important;
+}
+.search:focus-within{
+    border:#2B788B 1px solid !important;
+}
