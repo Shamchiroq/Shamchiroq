@@ -16,7 +16,6 @@ import About from '../pages/About';
 
 export const Router = () => {
     return (
-        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />}/>
@@ -30,12 +29,10 @@ export const Router = () => {
                     <Route path="test" element={<Test />}>
                         <Route index element={<TestHome/>}/>
                         <Route path="process" element={<Process/>}/>
-                        <Route path="result" element={<Result/>}/>
                     </Route>
 
                     <Route path="*" element={<Error/>}/>
                 </Route>
             </Routes>
-        </BrowserRouter>
     )
 }

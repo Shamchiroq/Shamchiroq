@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Pagination } from 'antd';
 import job from "../../assets/images/job.png";
 import { Search } from '../../components/Search';
 import coin from "../../assets/icons/coin.svg";
@@ -7,9 +8,10 @@ import laptop from "../../assets/icons/laptop.svg";
 import medicine from "../../assets/icons/medicine.svg";
 import react from "../../assets/icons/react.svg";
 import other from "../../assets/icons/other.svg";
+import jobs from "../../assets/images/jobs.svg";
 
 export default function Job() {
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
   const categories = [
     { title: "Tibbiyot", icon: medicine },
     { title: "Axborot texnologiyalari (IT)", icon: laptop },
@@ -32,7 +34,7 @@ export default function Job() {
             <img src={job} alt="aboutImg" />
           </div>
         </div>
-        <Search placeholder="Qanaqa kasb qidiryabsiz?"/>
+        <Search placeholder="Qanaqa kasb qidiryabsiz?" />
       </div>
       <div className='category text-center'>
         <h2 className='mb-10'>Kategoriyalar</h2>
@@ -44,6 +46,21 @@ export default function Job() {
             </div>
           )}
         </div>
+      </div>
+      <div className="job flex flex-col items-center pt-16 pb-8">
+        <h2 className='mb-10'>Yangi qo’shilganlar</h2>
+        <div className='job_wrapper grid grid-cols-2 gap-x-8 gap-y-5 w-full'>
+          {[1, 2, 3, 4, 5, 6, 7, 8].map((item, key) =>
+            <div key={key} className="job_card">
+              <img src={jobs} alt="img" className='w-24 h-20 rounded-lg' />
+              <div className='flex flex-col gap-y-4'>
+                <li className='font-bold'>Marketolog</li>
+                <li className='text-gray flex items-center gap-x-1'>Marketing, reklama va PR</li>
+              </div>
+            </div>
+          )}
+        </div>
+        <Pagination defaultCurrent={1} total={50} className="mt-5" />
       </div>
     </div>
   )

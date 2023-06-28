@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { Pagination } from 'antd';
+import { EnvironmentOutlined } from "@ant-design/icons";
 import job from "../../assets/images/job.png";
 import { Search } from '../../components/Search';
 import coin from "../../assets/icons/coin.svg";
@@ -7,9 +9,11 @@ import laptop from "../../assets/icons/laptop.svg";
 import medicine from "../../assets/icons/medicine.svg";
 import react from "../../assets/icons/react.svg";
 import other from "../../assets/icons/other.svg";
+import company from "../../assets/images/company.svg"
+import { vacancy } from '../../utils/data';
 
 export default function Vacancy() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     const categories = [
         { title: "Tibbiyot", icon: medicine },
         { title: "Axborot texnologiyalari (IT)", icon: laptop },
@@ -17,7 +21,7 @@ export default function Vacancy() {
         { title: "Moliya, buxgalteriya", icon: coin },
         { title: "Dizayn va amaliy sanʼat", icon: color },
         { title: "Boshqalar", icon: other }
-      ]
+    ]
     return (
         <div className='container bg-[#F6F5F4] py-4'>
             <div className='h-[90vh]'>
@@ -44,6 +48,33 @@ export default function Vacancy() {
                         </div>
                     )}
                 </div>
+            </div>
+            <div className="vacancy flex flex-col items-center pt-16 pb-8">
+                <h2 className='mb-10'>Yangi qo’shilganlar</h2>
+                <div className='vacancy_wrapper grid gap-y-5 w-full'>
+                    {vacancy.map((item, key) =>
+                       <a href={item.link} target="_blank">
+                        <div key={key} className="vacancy_card">
+                            <img src={item.logo} alt="img" className='w-24 h-20 rounded-lg' />
+                            <div className='grid grid-cols-3 w-[90%]'>
+                                <div className='flex flex-col gap-y-4'>
+                                    <li className='font-bold'>{item.title}</li>
+                                    <li className='text-gray flex items-center gap-x-1'><EnvironmentOutlined/> {item.location}</li>
+                                </div>
+                                <div className='flex flex-col gap-y-4'>
+                                    <li className='font-bold'>{item.salary}</li>
+                                    <li className='text-gray'>{item.company}</li>
+                                </div>
+                                <div className='flex flex-col gap-y-4 items-end'>
+                                    <li className='font-bold text-gray'>{item.deadline}</li>
+                                    <li className='text-gray'>{item.experience}</li>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    )}
+                </div>
+                <Pagination defaultCurrent={1} total={50} className="mt-5" />
             </div>
         </div>
     )

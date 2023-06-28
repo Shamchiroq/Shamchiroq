@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Pagination } from 'antd';
 import university from "../../assets/images/test.png";
 import { Search } from '../../components/Search';
+import univer from "../../assets/images/univer.svg";
 
 export default function University() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     return (
         <div className='container bg-[#F6F5F4]'>
             <div className='h-[90vh]'>
@@ -18,7 +20,22 @@ export default function University() {
                         <img src={university} alt="universityImg" />
                     </div>
                 </div>
-                <Search placeholder="Qaysi universitetni izlayabsiz?"/>
+                <Search placeholder="Qaysi universitetni izlayabsiz?" />
+            </div>
+            <div className="job flex flex-col items-center pt-16 pb-8">
+                <h2 className='mb-10'>Yangi qo’shilganlar</h2>
+                <div className='job_wrapper grid grid-cols-2 gap-x-8 gap-y-5 w-full'>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13].map((item, key) =>
+                        <div key={key} className="job_card">
+                            <img src={univer} alt="img" className='w-24 h-20 rounded-lg' />
+                            <div className='flex flex-col gap-y-4'>
+                                <li className='font-bold'>British Management University</li>
+                                <li className='text-gray flex items-center gap-x-1'>Tashkent</li>
+                            </div>
+                        </div>
+                    )}
+                </div>
+                <Pagination defaultCurrent={1} total={50} className="mt-5" />
             </div>
         </div>
     )

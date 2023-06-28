@@ -35,7 +35,7 @@ export default function Header() {
         </Dropdown>
         <li><NavLink className={({isActive})=>isActive?"text-black font-bold":"text-gray"} to="/entertainment">Ko’ngilochar</NavLink></li> 
       </ul>
-      <NavLink to="about"><RoundedButton type="blue">Biz haqimizda</RoundedButton></NavLink>
+      <RoundedButton type="blue" link="about">Biz haqimizda</RoundedButton>
     </header>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Pagination } from 'antd';
 import entertainment from "../../assets/images/entertainment.png";
 import brain_q from "../../assets/icons/brain_q.svg";
 import brain_s from "../../assets/icons/brain_s.svg";
@@ -6,7 +7,8 @@ import bx_brain from "../../assets/icons/bx_brain.svg";
 import speed from "../../assets/icons/speed.svg";
 import target from "../../assets/icons/target.svg";
 import other from "../../assets/icons/other.svg";
-
+import game from "../../assets/images/game.svg";
+import {games} from "../../utils/data";
 
 export default function Entertainment() {
   window.scrollTo(0,0);
@@ -41,6 +43,23 @@ export default function Entertainment() {
             </div>
           )}
         </div>
+      </div>
+      <div className="job flex flex-col items-center pt-16 pb-8">
+        <h2 className='mb-10'>Yangi qo’shilganlar</h2>
+        <div className='job_wrapper grid grid-cols-2 gap-x-8 gap-y-5 w-full'>
+          {games.map((item, key) =>
+            <a href={item.link} target="_blank">
+              <div key={key} className="job_card">
+              <img src={item.image} alt="img" className='w-24 h-20 rounded-lg' />
+              <div className='flex flex-col gap-y-4'>
+                <li className='font-bold'>{item.name}</li>
+                <li className='text-gray flex items-center gap-x-1'>{item.desc}</li>
+              </div>
+            </div>
+            </a>
+          )}
+        </div>
+        <Pagination defaultCurrent={1} total={50} className="mt-5" />
       </div>
     </div>
   )
