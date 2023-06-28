@@ -3,6 +3,7 @@ import { Pagination } from 'antd';
 import university from "../../assets/images/test.png";
 import { Search } from '../../components/Search';
 import univer from "../../assets/images/univer.svg";
+import { universityList } from '../../utils/data';
 
 export default function University() {
     window.scrollTo(0, 0);
@@ -25,12 +26,12 @@ export default function University() {
             <div className="job flex flex-col items-center pt-16 pb-8">
                 <h2 className='mb-10'>Yangi qo’shilganlar</h2>
                 <div className='job_wrapper grid grid-cols-2 gap-x-8 gap-y-5 w-full'>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13].map((item, key) =>
+                    {universityList.map((item, key) =>
                         <div key={key} className="job_card">
-                            <img src={univer} alt="img" className='w-24 h-20 rounded-lg' />
+                            <img src={item.logo} alt="img" className='w-24 h-20 rounded-lg' />
                             <div className='flex flex-col gap-y-4'>
-                                <li className='font-bold'>British Management University</li>
-                                <li className='text-gray flex items-center gap-x-1'>Tashkent</li>
+                                <li className='font-bold'>{item.name}</li>
+                                <li className='text-gray flex items-center gap-x-1'>{item.location}</li>
                             </div>
                         </div>
                     )}

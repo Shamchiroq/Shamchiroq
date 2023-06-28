@@ -9,6 +9,8 @@ import medicine from "../../assets/icons/medicine.svg";
 import react from "../../assets/icons/react.svg";
 import other from "../../assets/icons/other.svg";
 import jobs from "../../assets/images/jobs.svg";
+//data
+import {jobsList} from "../../utils/data.js";
 
 export default function Job() {
   window.scrollTo(0, 0);
@@ -50,12 +52,12 @@ export default function Job() {
       <div className="job flex flex-col items-center pt-16 pb-8">
         <h2 className='mb-10'>Yangi qo’shilganlar</h2>
         <div className='job_wrapper grid grid-cols-2 gap-x-8 gap-y-5 w-full'>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((item, key) =>
+          {jobsList.map((item, key) =>
             <div key={key} className="job_card">
-              <img src={jobs} alt="img" className='w-24 h-20 rounded-lg' />
+              <img src={item.logo} alt="img" className='w-24 h-20 rounded-lg' />
               <div className='flex flex-col gap-y-4'>
-                <li className='font-bold'>Marketolog</li>
-                <li className='text-gray flex items-center gap-x-1'>Marketing, reklama va PR</li>
+                <li className='font-bold'>{item.name}</li>
+                <li className='text-gray flex items-center gap-x-1'>{item.category}</li>
               </div>
             </div>
           )}

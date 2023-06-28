@@ -24,7 +24,6 @@ export default function Process() {
     <div className='test_body flex flex-col items-center gap-y-5'>
       {questions.map(item =>
         <div className='bg-[#fff] flex flex-col py-6 px-10 rounded-lg gap-y-4 w-full relative' key={item.id}>
-          <h6 className='absolute left-2 top-1 text-gray'>{item.id}</h6>
           {item.option.map((item, id) =>
             <li style={{ fontSize: "20px" }} key={id}>
               <input type="radio" name={item.name} value={item.value} id="myRadio" onChange={(e) => { setLetterBox([...letterBox, e.target.value]) }} /> {item.title}

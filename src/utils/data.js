@@ -222,3 +222,20 @@ export const vacancy=[
         link:"https://www.linkedin.com/company/air-marakanda/jobs/"
     },
 ]
+
+export const jobsList=[
+    {name:"Marketolog", category:"Marketing, reklama va PR", logo:"https://img.icons8.com/dusk/64/marketing.png"},
+    {name:"Moliyaviy tahlilchi", category:"Moliya, buxgalteriya", logo:"https://img.icons8.com/stickers/100/economic-improvement.png"},
+    {name:"Virusolog", category:"Tibbiyot", logo:"https://img.icons8.com/stickers/100/vial-virus.png"},
+    {name:"Grafik dizayner", category:"Dizayn va amaliy sanʼat", logo:"https://img.icons8.com/stickers/100/photo-editor.png"},
+    {name:"Maʼlumotlar tahlilchisi", category:"IT", logo:"https://img.icons8.com/stickers/100/system-task.png"},
+    {name:"Biotexnolog", category:"Ilm-fan", logo:"https://img.icons8.com/stickers/100/vegan-shoes.png"},
+];
+export const universityList=[
+    {name:"Harvard", location:"USA", logo:"https://upload.wikimedia.org/wikipedia/en/2/29/Harvard_shield_wreath.svg"},
+    {name:"Standford", location:"USA", logo:"https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png"},
+    {name:"MIT", location:"USA", logo:"https://seeklogo.com/images/M/MIT-logo-73A348B3DB-seeklogo.com.png"},
+    {name:"Oxford", location:"England", logo:"https://upload.wikimedia.org/wikipedia/commons/f/ff/Oxford-University-Circlet.svg"},
+    {name:"Yale", location:"USA", logo:"https://upload.wikimedia.org/wikipedia/commons/0/07/Yale_University_Shield_1.svg"},
+    {name:"PJAIT", location:"Poland", logo:"http://i.studyinpoland.pl/universities/logo/polish-japanese-academy-of-information-technology.jpg"},
+];
