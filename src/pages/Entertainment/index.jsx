@@ -7,7 +7,6 @@ import bx_brain from "../../assets/icons/bx_brain.svg";
 import speed from "../../assets/icons/speed.svg";
 import target from "../../assets/icons/target.svg";
 import other from "../../assets/icons/other.svg";
-import game from "../../assets/images/game.svg";
 import {games} from "../../utils/data";
 
 export default function Entertainment() {
@@ -21,7 +20,8 @@ export default function Entertainment() {
     { title: "Boshqalar", icon: other }
   ]
   return (
-    <div className='container bg-[#F6F5F4] py-5'>
+    <div className='bg-[#F6F5F4]'>
+      <div className='container'>
       <div className='main_block'>
         <div className='flex flex-col justify-center items-center'>
           <ul className='grid gap-y-10 px-20'>
@@ -60,6 +60,7 @@ export default function Entertainment() {
           )}
         </div>
         <Pagination defaultCurrent={1} total={50} className="mt-5" />
+      </div>
       </div>
     </div>
   )

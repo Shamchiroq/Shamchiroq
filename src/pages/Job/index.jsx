@@ -23,7 +23,8 @@ export default function Job() {
     { title: "Boshqalar", icon: other }
   ]
   return (
-    <div className='container bg-[#F6F5F4] py-5'>
+    <div className='bg-[#F6F5F4] py-5'>
+      <div className='container'>
       <div className='h-[90vh]'>
         <div className='grid grid-cols-2'>
           <div className='flex flex-col justify-center items-center'>
@@ -63,6 +64,7 @@ export default function Job() {
           )}
         </div>
         <Pagination defaultCurrent={1} total={50} className="mt-5" />
+      </div>
       </div>
     </div>
   )

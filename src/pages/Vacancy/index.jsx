@@ -23,58 +23,60 @@ export default function Vacancy() {
         { title: "Boshqalar", icon: other }
     ]
     return (
-        <div className='container bg-[#F6F5F4] py-4'>
-            <div className='h-[90vh]'>
-                <div className='grid grid-cols-2'>
-                    <div className='flex flex-col justify-center items-center'>
-                        <ul className='grid gap-y-10 px-20'>
-                            <h1>Vakansiyalar</h1>
-                            <li className='text-gray'>Orzuyingizdagi kasbni egallang!</li>
-                        </ul>
-                    </div>
-                    <div className='flex justify-center items-center'>
-                        <img src={job} alt="jobImg" />
-                    </div>
-                </div>
-                <Search placeholder="Qanaqa bo’sh ish o’rni qidiryabsiz?" />
-            </div>
-            <div className='category text-center'>
-                <h2 className='mb-10'>Kategoriyalar</h2>
-                <div className='grid grid-cols-3 gap-5'>
-                    {categories.map((item, id) =>
-                        <div key={id} className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
-                            <img src={item.icon} alt="icon" />
-                            <li className='text-gray mt-4'>{item.title}</li>
+        <div className='bg-[#F6F5F4]'>
+            <div className='container'>
+                <div className='h-[90vh]'>
+                    <div className='grid grid-cols-2'>
+                        <div className='flex flex-col justify-center items-center'>
+                            <ul className='grid gap-y-10 px-20'>
+                                <h1>Vakansiyalar</h1>
+                                <li className='text-gray'>Orzuyingizdagi kasbni egallang!</li>
+                            </ul>
                         </div>
-                    )}
+                        <div className='flex justify-center items-center'>
+                            <img src={job} alt="jobImg" />
+                        </div>
+                    </div>
+                    <Search placeholder="Qanaqa bo’sh ish o’rni qidiryabsiz?" />
                 </div>
-            </div>
-            <div className="vacancy flex flex-col items-center pt-16 pb-8">
-                <h2 className='mb-10'>Yangi qo’shilganlar</h2>
-                <div className='vacancy_wrapper grid gap-y-5 w-full'>
-                    {vacancy.map((item, key) =>
-                       <a href={item.link} target="_blank">
-                        <div key={key} className="vacancy_card">
-                            <img src={item.logo} alt="img" className='w-24 h-20 rounded-lg' />
-                            <div className='grid grid-cols-3 w-[90%]'>
-                                <div className='flex flex-col gap-y-4'>
-                                    <li className='font-bold'>{item.title}</li>
-                                    <li className='text-gray flex items-center gap-x-1'><EnvironmentOutlined/> {item.location}</li>
-                                </div>
-                                <div className='flex flex-col gap-y-4'>
-                                    <li className='font-bold'>{item.salary}</li>
-                                    <li className='text-gray'>{item.company}</li>
-                                </div>
-                                <div className='flex flex-col gap-y-4 items-end'>
-                                    <li className='font-bold text-gray'>{item.deadline}</li>
-                                    <li className='text-gray'>{item.experience}</li>
-                                </div>
+                <div className='category text-center'>
+                    <h2 className='mb-10'>Kategoriyalar</h2>
+                    <div className='grid grid-cols-3 gap-5'>
+                        {categories.map((item, id) =>
+                            <div key={id} className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
+                                <img src={item.icon} alt="icon" />
+                                <li className='text-gray mt-4'>{item.title}</li>
                             </div>
-                        </div>
-                        </a>
-                    )}
+                        )}
+                    </div>
                 </div>
-                <Pagination defaultCurrent={1} total={50} className="mt-5" />
+                <div className="vacancy flex flex-col items-center pt-16 pb-8">
+                    <h2 className='mb-10'>Yangi qo’shilganlar</h2>
+                    <div className='vacancy_wrapper grid gap-y-5 w-full'>
+                        {vacancy.map((item, key) =>
+                            <a href={item.link} target="_blank">
+                                <div key={key} className="vacancy_card">
+                                    <img src={item.logo} alt="img" className='w-24 h-20 rounded-lg' />
+                                    <div className='grid grid-cols-3 w-[90%]'>
+                                        <div className='flex flex-col gap-y-4'>
+                                            <li className='font-bold'>{item.title}</li>
+                                            <li className='text-gray flex items-center gap-x-1'><EnvironmentOutlined /> {item.location}</li>
+                                        </div>
+                                        <div className='flex flex-col gap-y-4'>
+                                            <li className='font-bold'>{item.salary}</li>
+                                            <li className='text-gray'>{item.company}</li>
+                                        </div>
+                                        <div className='flex flex-col gap-y-4 items-end'>
+                                            <li className='font-bold text-gray'>{item.deadline}</li>
+                                            <li className='text-gray'>{item.experience}</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        )}
+                    </div>
+                    <Pagination defaultCurrent={1} total={50} className="mt-5" />
+                </div>
             </div>
         </div>
     )

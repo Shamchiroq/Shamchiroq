@@ -3,7 +3,8 @@ import logo from "../../assets/images/logo.svg";
 import {NavLink} from "react-router-dom"
 export default function Footer() {
   return (
-    <footer className='container py-8 grid grid-cols-5 bg-[#F6F5F4]'>
+    <footer className='bg-[#F6F5F4]'>
+      <div className='container grid grid-cols-5'>
       <div className='flex flex-col justify-between col-span-2'>
           <div className='grid gap-y-4'>
             <NavLink to="/"><img src={logo} alt="logo" /></NavLink>
@@ -29,6 +30,7 @@ export default function Footer() {
         <NavLink to="vacancies"><li className='text-gray my-1'>Vakansiyalar</li></NavLink>
         <NavLink to="entertainment"><li className='text-gray my-1'>Ko’ngilochar</li></NavLink>
       </ul>
+      </div>
     </footer>
   )
 }

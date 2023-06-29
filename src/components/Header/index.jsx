@@ -21,21 +21,23 @@ export default function Header() {
     },
   ];
   return (
-    <header className='container flex justify-between items-center py-3 bg-pale'>
-      <NavLink to="/"><img src={logo} alt="logo" /></NavLink>
-      <ul className='flex gap-x-8'>
-        <li><NavLink className={({isActive})=>isActive?"text-black font-bold":"text-gray"} to="/">Asosiy</NavLink></li>
-        <li><NavLink className={({isActive})=>isActive?"text-black font-bold":"text-gray"} to="/test">Psixologik test</NavLink></li>
-        <li><NavLink className={({isActive})=>isActive?"text-black font-bold":"text-gray"} to="/scholarships">Grantlar</NavLink></li>
-        <Dropdown menu={{ items }} >
-          <Space className='text-gray hover:text-black cursor-pointer'>
-          <li>Kelajak sari</li>
-          <DownOutlined className='relative bottom-[3px]'/>
-          </Space>
-        </Dropdown>
-        <li><NavLink className={({isActive})=>isActive?"text-black font-bold":"text-gray"} to="/entertainment">Ko’ngilochar</NavLink></li> 
-      </ul>
-      <RoundedButton type="blue" link="about">Biz haqimizda</RoundedButton>
+    <header className='bg-pale'>
+      <nav className="container flex justify-between items-center !py-3">
+          <NavLink to="/"><img src={logo} alt="logo" /></NavLink>
+          <ul className='flex gap-x-8'>
+            <li><NavLink className={({ isActive }) => isActive ? "text-black font-bold" : "text-gray"} to="/">Asosiy</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "text-black font-bold" : "text-gray"} to="/test">Psixologik test</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? "text-black font-bold" : "text-gray"} to="/scholarships">Grantlar</NavLink></li>
+            <Dropdown menu={{ items }} >
+              <Space className='text-gray hover:text-black cursor-pointer'>
+                <li>Kelajak sari</li>
+                <DownOutlined className='relative bottom-[3px]' />
+              </Space>
+            </Dropdown>
+            <li><NavLink className={({ isActive }) => isActive ? "text-black font-bold" : "text-gray"} to="/entertainment">Ko’ngilochar</NavLink></li>
+          </ul>
+          <RoundedButton type="blue" link="about">Biz haqimizda</RoundedButton>
+      </nav>
     </header>
   )
 }

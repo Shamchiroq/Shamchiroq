@@ -3,7 +3,8 @@ import about from "../../assets/images/main-pic.svg";
 export default function About() {
   window.scrollTo(0,0);
   return (
-    <div className='container bg-[#F6F5F4] py-5'>
+    <div className='bg-[#F6F5F4]'>
+      <div className='container'>
       <div className='main_block'>
         <div className='flex flex-col justify-center items-center'>
           <ul className='grid gap-y-10'>
@@ -30,6 +31,7 @@ export default function About() {
       <div className='about_video flex flex-col items-center my-20 gap-y-10'>
       <h2>Loyiha haqida video</h2>
       <iframe className="h-[60vh] w-[60%] rounded-lg" src="https://www.youtube.com/embed/BoswxN6sx6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
       </div>
     </div>
   )

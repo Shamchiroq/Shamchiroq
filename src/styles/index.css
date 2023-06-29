@@ -35,7 +35,7 @@ h3, h4, h4, h6, p, li{
 
 /* style with class */
 .container{
-    @apply px-24;
+    @apply mx-auto py-5;
 }
 .redBtn{
     background-color: #F2D4DC;
