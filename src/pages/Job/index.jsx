@@ -23,34 +23,34 @@ export default function Job() {
     { title: "Boshqalar", icon: other }
   ]
   return (
-    <div className='bg-[#F6F5F4] py-5'>
+    <div className='bg-[#F6F5F4]'>
       <div className='container'>
-      <div className='h-[90vh]'>
-        <div className='grid grid-cols-2'>
-          <div className='flex flex-col justify-center items-center'>
-            <ul className='grid gap-y-10 px-20'>
+      <div className='main_block_v2'>
+        <div className='banner'>
+          <div className='flex flex-col justify-center items-center xl:px-0 px-5'>
+            <ul className='main_text'>
               <h1>Kasblar ro'yxati</h1>
               <li className='text-gray'>Kelajakda egallamoqchi bo’lgan sohangiz uchun yo’nalishlar</li>
             </ul>
           </div>
-          <div className='flex justify-center items-center'>
-            <img src={job} alt="aboutImg" />
+          <div className='flex justify-center items-center colImg'>
+            <img src={job} alt="aboutImg" className='relative xl:left-0 md:left-14 left-8'/>
           </div>
         </div>
         <Search placeholder="Qanaqa kasb qidiryabsiz?" />
       </div>
-      <div className='category text-center'>
+      <div className='text-center py-10'>
         <h2 className='mb-10'>Kategoriyalar</h2>
-        <div className='grid grid-cols-3 gap-5'>
+        <div className='category'>
           {categories.map((item, id) =>
-            <div key="id" className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
+            <div key={id} className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
               <img src={item.icon} alt="icon" />
               <li className='text-gray mt-4'>{item.title}</li>
             </div>
           )}
         </div>
       </div>
-      <div className="job flex flex-col items-center pt-16 pb-8">
+      <div className="job flex flex-col items-center pt-10 pb-8">
         <h2 className='mb-10'>Yangi qo’shilganlar</h2>
         <div className='job_wrapper grid grid-cols-2 gap-x-8 gap-y-5 w-full'>
           {jobsList.map((item, key) =>

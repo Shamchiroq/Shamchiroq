@@ -7,7 +7,7 @@ export default function Layout() {
   return (
     <>
     <Header/>
-    <main className="min-h-[80vh]"><Outlet/></main>
+    <main className="xl:min-h-[80vh] md:min-h-[60vh] overflow-hidden"><Outlet/></main>
     <Footer/>
     </>
   )

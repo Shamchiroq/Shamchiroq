@@ -14,19 +14,18 @@ header{
 }
 footer{
     border-top: 2px solid #E0E0E0;
+    padding: 2rem 0;
 } 
 h1{
-    @apply text-black font-bold text-5xl;
+    @apply text-black font-bold xl:text-5xl text-3xl;
     font-family: 'Dela Gothic One', cursive; 
 }
 h2{
-    @apply text-black font-bold text-3xl;
+    @apply text-black font-bold xl:text-3xl text-2xl;
     font-family: 'Dela Gothic One', cursive; 
 }
 li{
-    list-style-type: none;
-    font-size: 16px;
-    letter-spacing: -0.5px;
+    @apply xl:text-[16px] !text-[15px] list-none tracking-tighter;
 }
 h3, h4, h4, h6, p, li{
     font-family: 'Montserrat', sans-serif;
@@ -35,7 +34,7 @@ h3, h4, h4, h6, p, li{
 
 /* style with class */
 .container{
-    @apply mx-auto py-5;
+    @apply mx-auto;
 }
 .redBtn{
     background-color: #F2D4DC;
@@ -78,19 +77,34 @@ h3, h4, h4, h6, p, li{
 }
 
 .main_block{
-    @apply h-[90vh] grid grid-cols-2;
+    @apply xl:min-h-[80vh] min-h-[70vh] grid xl:grid-cols-2 grid-cols-1;
+}
+
+.main_block_v2{
+    @apply xl:min-h-[80vh] min-h-[60vh] flex flex-col justify-around;
+}
+
+.banner{
+    @apply grid xl:grid-cols-2 grid-cols-1;
+}
+
+.main_text{
+    @apply grid xl:gap-y-10 gap-y-5 xl:px-20 px-5 xl:text-start text-center
+}
+
+.colImg {
+    order:-1;
 }
 
 .search-btn{
-    @apply bg-dark-green text-[white] !px-10 !h-[55px];
+    @apply bg-dark-green text-[white] !px-10 xl:!h-[55px] !h-[40px];
 }
 .search-btn:hover{
     color:#fff !important;
     border:#2B788B 1px solid !important;
 }
 .search{
-    height: 55px !important;
-    color:#2B788B !important;
+    @apply !text-[#2B788B] xl:!h-[55px] !h-[40px];
 }
 .search:hover{
     border:#2B788B 1px solid !important;
@@ -99,5 +113,13 @@ h3, h4, h4, h6, p, li{
     border:#2B788B 1px solid !important;
 }
 .scholarship_card, .vacancy_card, .job_card, .university_card{
-    @apply rounded-lg bg-[#fff] w-full p-5 flex gap-x-8 cursor-pointer hover:shadow hover:shadow-dark-green;
+    @apply rounded-lg bg-[#fff] w-full xl:p-5 p-3 flex xl:gap-x-8 gap-x-4 cursor-pointer hover:shadow hover:shadow-dark-green;
+}
+
+.category{
+    @apply grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 xl:px-0 px-5;
+}
+
+.job_wrapper, .university_wrapper{
+    @apply grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-x-8 gap-5 w-full xl:px-0 px-5;
 }

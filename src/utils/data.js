@@ -232,10 +232,10 @@ export const jobsList=[
     {name:"Biotexnolog", category:"Ilm-fan", logo:"https://img.icons8.com/stickers/100/vegan-shoes.png"},
 ];
 export const universityList=[
-    {name:"Harvard", location:"USA", logo:"https://upload.wikimedia.org/wikipedia/en/2/29/Harvard_shield_wreath.svg"},
-    {name:"Standford", location:"USA", logo:"https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png"},
-    {name:"MIT", location:"USA", logo:"https://seeklogo.com/images/M/MIT-logo-73A348B3DB-seeklogo.com.png"},
-    {name:"Oxford", location:"England", logo:"https://upload.wikimedia.org/wikipedia/commons/f/ff/Oxford-University-Circlet.svg"},
-    {name:"Yale", location:"USA", logo:"https://upload.wikimedia.org/wikipedia/commons/0/07/Yale_University_Shield_1.svg"},
-    {name:"PJAIT", location:"Poland", logo:"http://i.studyinpoland.pl/universities/logo/polish-japanese-academy-of-information-technology.jpg"},
+    {name:"Andijon davlat chet tillari instituti", location:"Andijon", logo:"https://adchti.uz/wp-content/uploads/2022/10/AndDChTI.png"},
+    {name:"Buxoro tabiiy resurslarni boshqarish instituti", location:"Buxoro", logo:"https://yt3.googleusercontent.com/x2Q_g73F_dffqz1lC14D-HsfQioEIXz0tf3Migba4RTAMfC2P5qTnWOw-jKROJNjxuZScvaVkb0=s900-c-k-c0x00ffffff-no-rj"},
+    {name:"British management university", location:"Tashkent", logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcvMcBCsHFoO8RllfsTCdLL5RbczlmPUKaGA&usqp=CAU"},
+    {name:"O'zbekiston milliy universiteti", location:"Tashkent", logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/National_University_of_Uzbekistan_Logo.png/220px-National_University_of_Uzbekistan_Logo.png"},
+    {name:"Qarshi muhandislik iqtisodiyot instituti", location:"Qarshi", logo:"https://static5.tgstat.ru/channels/_0/5d/5d19c61eb5270628bf8eaafba6f36c17.jpg"},
+    {name:"Westminster International University", location:"Tashkent", logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRryHslgx9PegHyR9FuIvyj3q60u_3Lu5vZPA&usqp=CAU"},
 ];

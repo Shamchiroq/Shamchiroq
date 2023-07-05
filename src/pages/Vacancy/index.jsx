@@ -25,23 +25,23 @@ export default function Vacancy() {
     return (
         <div className='bg-[#F6F5F4]'>
             <div className='container'>
-                <div className='h-[90vh]'>
-                    <div className='grid grid-cols-2'>
+                <div className='main_block_v2'>
+                    <div className='banner'>
                         <div className='flex flex-col justify-center items-center'>
-                            <ul className='grid gap-y-10 px-20'>
+                            <ul className='main_text'>
                                 <h1>Vakansiyalar</h1>
                                 <li className='text-gray'>Orzuyingizdagi kasbni egallang!</li>
                             </ul>
                         </div>
-                        <div className='flex justify-center items-center'>
-                            <img src={job} alt="jobImg" />
+                        <div className='flex justify-center items-center colImg'>
+                            <img src={job} alt="jobImg" className='relative xl:left-0 md:left-14 left-8'/>
                         </div>
                     </div>
                     <Search placeholder="Qanaqa bo’sh ish o’rni qidiryabsiz?" />
                 </div>
-                <div className='category text-center'>
+                <div className='text-center pt-10'>
                     <h2 className='mb-10'>Kategoriyalar</h2>
-                    <div className='grid grid-cols-3 gap-5'>
+                    <div className='category'>
                         {categories.map((item, id) =>
                             <div key={id} className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
                                 <img src={item.icon} alt="icon" />
@@ -52,21 +52,21 @@ export default function Vacancy() {
                 </div>
                 <div className="vacancy flex flex-col items-center pt-16 pb-8">
                     <h2 className='mb-10'>Yangi qo’shilganlar</h2>
-                    <div className='vacancy_wrapper grid gap-y-5 w-full'>
+                    <div className='vacancy_wrapper grid gap-y-5 w-full xl:px-0 px-5'>
                         {vacancy.map((item, key) =>
                             <a href={item.link} target="_blank">
                                 <div key={key} className="vacancy_card">
                                     <img src={item.logo} alt="img" className='w-24 h-20 rounded-lg' />
-                                    <div className='grid grid-cols-3 w-[90%]'>
-                                        <div className='flex flex-col gap-y-4'>
-                                            <li className='font-bold'>{item.title}</li>
-                                            <li className='text-gray flex items-center gap-x-1'><EnvironmentOutlined /> {item.location}</li>
+                                    <div className='grid xl:grid-cols-3 md:grid-cols-3 grid-cols-2 w-[90%]'>
+                                        <div className='flex flex-col justify-between gap-y-4'>
+                                            <li className='font-bold xl:text-[16px] !text-[13px]'>{item.title}</li>
+                                            <li className='text-gray flex items-center gap-x-1 xl:text-[16px] !text-[13px]'><EnvironmentOutlined /> {item.location}</li>
                                         </div>
-                                        <div className='flex flex-col gap-y-4'>
-                                            <li className='font-bold'>{item.salary}</li>
-                                            <li className='text-gray'>{item.company}</li>
+                                        <div className='flex flex-col justify-between gap-y-4'>
+                                            <li className='font-bold xl:text-[16px] !text-[13px]'>{item.salary}</li>
+                                            <li className='text-gray xl:text-[16px] !text-[13px]'>{item.company}</li>
                                         </div>
-                                        <div className='flex flex-col gap-y-4 items-end'>
+                                        <div className='xl:flex md:flex hidden flex-col gap-y-4 items-end'>
                                             <li className='font-bold text-gray'>{item.deadline}</li>
                                             <li className='text-gray'>{item.experience}</li>
                                         </div>

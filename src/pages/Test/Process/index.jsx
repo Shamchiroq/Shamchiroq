@@ -17,11 +17,11 @@ export default function Process() {
   }
   console.log(resultSign);
   return !isResult ? (<div className='container min-h-[90vh] py-10'>
-    <div className='flex flex-col items-center justify-center gap-y-8 pb-10'>
+    <div className='flex flex-col items-center justify-center gap-y-8 pb-10 xl:px-0 px-5'>
       <h2>Psixologik test</h2>
-      <p className='text-gray'>*Iltimos, har bir blokdagi 2 ta variantdan o'zingizga ma'qulrog'ini tanlang</p>
+      <p className='text-gray xl:text-start text-center'>*Iltimos, har bir blokdagi 2 ta variantdan o'zingizga ma'qulrog'ini tanlang</p>
     </div>
-    <div className='test_body flex flex-col items-center gap-y-5'>
+    <div className='test_body flex flex-col items-center gap-y-5 xl:px-0 px-5'>
       {questions.map(item =>
         <div className='bg-[#fff] flex flex-col py-6 px-10 rounded-lg gap-y-4 w-full relative' key={item.id}>
           {item.option.map((item, id) =>

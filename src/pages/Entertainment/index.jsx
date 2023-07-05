@@ -24,32 +24,32 @@ export default function Entertainment() {
       <div className='container'>
       <div className='main_block'>
         <div className='flex flex-col justify-center items-center'>
-          <ul className='grid gap-y-10 px-20'>
+          <ul className='grid xl:gap-y-10 gap-y-5 xl:px-20 px-5 xl:text-start text-center'>
             <h1>Ko’ngilochar</h1>
             <li className='text-gray'>Bilim olishga yo'naltirilgan o'yinlar yordamida vaqtingizdan unumli foydalaning</li>
           </ul>
         </div>
-        <div className='flex justify-center items-center'>
-          <img src={entertainment} alt="aboutImg" />
+        <div className='flex justify-center items-center colImg xl:py-0 py-5'>
+          <img src={entertainment} alt="aboutImg" className='relative xl:left-0 md:left-24 left-14'/>
         </div>
       </div>
-      <div className='category text-center'>
+      <div className='text-center pt-10'>
         <h2 className='mb-10'>Kategoriyalar</h2>
-        <div className='grid grid-cols-3 gap-5'>
+        <div className='category'>
           {categories.map((item, id) =>
-            <div key="id" className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
+            <div key={id} className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
               <img src={item.icon} alt="icon" />
               <li className='text-gray mt-4'>{item.title}</li>
             </div>
           )}
         </div>
       </div>
-      <div className="job flex flex-col items-center pt-16 pb-8">
+      <div className="job flex flex-col items-center pt-10 pb-8">
         <h2 className='mb-10'>Yangi qo’shilganlar</h2>
-        <div className='job_wrapper grid grid-cols-2 gap-x-8 gap-y-5 w-full'>
+        <div className='job_wrapper'>
           {games.map((item, key) =>
-            <a href={item.link} target="_blank">
-              <div key={key} className="job_card">
+            <a key={key} href={item.link} target="_blank">
+              <div className="job_card">
               <img src={item.image} alt="img" className='w-24 h-20 rounded-lg' />
               <div className='flex flex-col gap-y-4'>
                 <li className='font-bold'>{item.name}</li>

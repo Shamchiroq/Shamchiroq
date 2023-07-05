@@ -18,7 +18,7 @@ export default function Test() {
   return (
     <div className='main_block'>
       <div className='flex flex-col justify-center items-center'>
-        <ul className='grid gap-y-10 px-20'>
+        <ul className='grid gap-y-10 xl:px-20 px-5 xl:text-start text-center py-10'>
           <h1 className='text-orange'>Psixologik test</h1>
           <h3 className='text-gray'>Ushbu psixologik test sizning qaysi kasbga qiziqishingiz va moyilligingiz
             borligini aniqlab beradi. Har bir bo'limda berilgan <span className='text-black font-bold'>2 ta variantdan o'zingizga ma'qulrog'ini</span> tanlang.
@@ -27,7 +27,7 @@ export default function Test() {
           <RoundedButton onClick={show}>Testni topshirish →</RoundedButton>
         </ul>
       </div>
-      <div className='flex justify-center items-center'>
+      <div className='colImg flex justify-center items-center'>
         <img src={test} alt="jobImg" />
       </div>
       <TestModal cancel={cancel} ok={ok} isModalOpen={isModalOpen} />
