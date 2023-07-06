@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Pagination, Typography } from 'antd';
 import { EnvironmentOutlined, ClockCircleOutlined } from "@ant-design/icons";
 import scholarships from "../../assets/images/about.png";
@@ -10,9 +10,14 @@ import hat from "../../assets/icons/hat.svg";
 import heart from "../../assets/icons/heart.svg";
 import queen from "../../assets/icons/queen.svg";
 import { scholarshipsList } from '../../utils/data';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Scholarship() {
-    window.scrollTo(0, 0);
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+        AOS.init({duration:2000});
+        })
     const categories = [
         { title: "Grantlar va stipendiyalar", icon: cap },
         { title: "Yozgi va qishki maktablar", icon: hat },
@@ -24,7 +29,7 @@ export default function Scholarship() {
     return (
         <div className='bg-[#F6F5F4]'>
             <div className='container'>
-                <div className='main_block_v2'>
+                <div className='main_block_v2' data-aos="fade">
                     <div className='banner'>
                         <div className='flex flex-col justify-center items-center'>
                             <ul className='main_text' >
@@ -32,7 +37,7 @@ export default function Scholarship() {
                                 <li className='text-gray'>Dunyo bo’ylab grantlar va imkoniyatlar</li>
                             </ul>
                         </div>
-                        <div className='flex justify-center items-center colImg'>
+                        <div className='flex justify-center items-center xl:order-none colImg'>
                             <img src={scholarships} alt="scholarshipsImg" />
                         </div>
                     </div>
@@ -40,9 +45,9 @@ export default function Scholarship() {
                 </div>
                 <div className='text-center pt-10'>
                     <h2 className='mb-10'>Kategoriyalar</h2>
-                    <div className='category'>
+                    <div className='category' data-aos="fade-right">
                         {categories.map((item, id) =>
-                            <div key="id" className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
+                            <div key={id} className="bg-[white] py-6 cursor-pointer rounded-xl flex flex-col items-center hover:shadow hover:shadow-dark-green">
                                 <img src={item.icon} alt="icon" />
                                 <li className='text-gray mt-4'>{item.title}</li>
                             </div>
@@ -51,10 +56,10 @@ export default function Scholarship() {
                 </div>
                 <div className="scholarships flex flex-col items-center pt-16 pb-8">
                     <h2 className='mb-10'>Yangi qo’shilganlar</h2>
-                    <div className='scholarship_wrapper grid gap-y-5 w-full xl:px-0 px-5'>
+                    <div className='scholarship_wrapper grid gap-y-5 w-full xl:px-0 px-5' data-aos="fade-left">
                         {scholarshipsList.map((item, key) =>
-                            <a href={item.link} target="__blank">
-                                <div key={key} className="scholarship_card">
+                            <a key={key} href={item.link} target="__blank">
+                                <div className="scholarship_card">
                                     <img src={item.image} alt="img" className='w-24 h-24 rounded-lg' />
                                     <div className='flex flex-col justify-around gap-y-8'>
                                         <Typography className='font-bold'>{item.name}</Typography>
