@@ -36,7 +36,7 @@ export default function About() {
         </div>
         <div className='about_video flex flex-col items-center gap-y-10' data-aos="fade-left">
           <h2>Loyiha haqida video</h2>
-          <iframe className="xl:h-[60vh] h-[30vh] xl:w-[60%] w-[95%] rounded-lg" src="https://www.youtube.com/embed/BoswxN6sx6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe className="xl:h-[60vh] h-[30vh] xl:w-[60%] w-[95%] rounded-lg" src="https://www.youtube.com/embed/sHBm84DMsLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>

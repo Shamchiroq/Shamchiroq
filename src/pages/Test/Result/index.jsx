@@ -21,7 +21,7 @@ export default function Result({ resultSign }) {
       ) : (
         <>
           <h1 className='text-dark-green relative xl:left-0 left-5'>Natija🎉🎉🎉</h1>
-          <div className='grid xl:grid-cols-2 md:grid-cols-1 grid-cols-1'>
+          <div className='grid xl:grid-cols-2 md:grid-cols-1 grid-cols-1 px-5'>
             <div className='grid xl:gap-y-5 gap-y-10 xl:text-start text-center'>
               <li className='text-black !text-[18px]'>Sizda <span className='text-dark-green font-bold'>{results[resultSign].soha}</span> yo'nalishiga qiziqish va qobiliyat bor!</li>
               <li className='text-black !text-[18px]'>Izoh: <span className='text-dark-green font-bold'>{results[resultSign].soha}</span></li>

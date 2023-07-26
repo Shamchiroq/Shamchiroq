@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import test from "../../../assets/images/test.png";
+import testImg from "../../../assets/images/test.png";
 import RoundedButton from "../../../components/Button";
 import TestModal from '../../../components/Modal';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Test() {
+export default function Test({test, setTest}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const show = () => {
     setIsModalOpen(true);
@@ -33,9 +33,9 @@ export default function Test() {
         </ul>
       </div>
       <div className='xl:order-none colImg flex justify-center items-center'>
-        <img src={test} alt="jobImg" />
+        <img src={testImg} alt="jobImg" />
       </div>
-      <TestModal cancel={cancel} ok={ok} isModalOpen={isModalOpen} />
+      <TestModal cancel={cancel} ok={ok} isModalOpen={isModalOpen} test={test} setTest={setTest}/>
     </div>
   )
 }

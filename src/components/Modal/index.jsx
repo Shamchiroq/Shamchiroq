@@ -2,10 +2,11 @@ import React from 'react'
 import { Button, Form, Input, Modal } from 'antd';
 import { history } from '../../utils/history';
 
-export default function TestModal({ isModalOpen, ok, cancel }) {
+export default function TestModal({ isModalOpen, ok, cancel, test, setTest }) {
   const onFinish = (values) => {
     console.log('Success:', values);
-    history.push("/test/process")
+    history.push("/test/process");
+    setTest(!test)
 
   };
   const onFinishFailed = (errorInfo) => {
